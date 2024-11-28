@@ -13,6 +13,8 @@
     --fonte-secundario: "Josefin Sans";
     --azul:#002F52;
     --preto:#000;
+    --cinza: #474646;
+    --cinza-claro: #858585;
 }
 body {
     background-color: var(--cor-de-fundo);
