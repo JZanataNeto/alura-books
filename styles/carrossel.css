@@ -1,12 +1,25 @@
 .carrossel__titulo {
     color: var(--laranja);
-    background-color: var(--branco);
     text-align: center;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 700;
     padding: 1em 0 0.5em 0;
+    background: linear-gradient(45deg, #e98e07, #e4e708, #e24c07, #e7ab04);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
 .swiper-slide img {
     width: 100%;
 }
@@ -61,6 +74,21 @@
     color: var(--branco);
     font-weight: 700;
     text-decoration: none;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.06);
+    }
+}
+.botoes__ancora:hover {
+    animation-name: pulse;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @media screen and (min-width: 1024px) {
